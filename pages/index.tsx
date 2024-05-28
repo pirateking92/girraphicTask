@@ -43,8 +43,13 @@ const IndexPage = ({ athletes }: { athletes: Athlete[] }) => {
         sortByRank={sortByRank}
         sortByBibNumber={sortByBibNumber}
       />
-      <SortOptions sortByRank={sortByRank} sortByBibNumber={sortByBibNumber} />
-      <ExportButton athletes={athletesState} />
+      <div className="flex space-x-4 mb-4">
+        <SortOptions
+          sortByRank={sortByRank}
+          sortByBibNumber={sortByBibNumber}
+        />
+        <ExportButton athletes={athletesState} />
+      </div>
     </div>
   );
 };

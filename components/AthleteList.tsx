@@ -20,10 +20,10 @@ const AthleteList: React.FC<AthleteListProps> = ({
 }) => {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Athlete Results</h2>
-      <table>
-        <thead>
-          <tr>
+      <h2 className="text-2xl font-serif mb-4">Athlete Results</h2>
+      <table className="min-w-full divide-y divide-gray-300">
+        <thead className="bg-gray-50">
+          <tr className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             <th>Rank</th>
             <th>Bib Number</th>
             <th>Name</th>
