@@ -1,9 +1,9 @@
 import { readFileSync } from "fs";
-import { Athlete } from "../../types";
+import { RaceResults } from "../../types";
 
 export default function handler(_req: any, res: any) {
-  const athletes: Athlete[] = JSON.parse(
-    readFileSync("data/MarathonResults.json", "utf8")
+  const raceData: RaceResults = JSON.parse(
+    readFileSync("data/athletes.json", "utf8")
   );
-  res.status(200).json(athletes);
+  res.status(200).json(raceData.athletes);
 }

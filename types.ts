@@ -1,8 +1,22 @@
 export interface Athlete {
-  id: number;
   rank: number;
-  lastName: string;
-  firstName: string;
-  finishTime: string;
-  countryCode: string;
+  firstname: string;
+  surname: string;
+  athleteid: string;
+  finishtime: string;
+  raceprogress: string;
+  teamname: string;
+  bibnumber: string;
+  flag: string;
+  countryname: string;
+}
+
+export interface RaceResults {
+  raceStatus: string;
+  gender: string;
+  racename: string;
+  tod: string;
+  lastupdated: string;
+  racelength: number;
+  athletes: Athlete[];
 }
