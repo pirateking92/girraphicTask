@@ -2,7 +2,11 @@ import React from "react";
 import { CSVLink } from "react-csv";
 import { Athlete } from "../types";
 
-const generateCSV = (athletes: Athlete[]) => {
+const generateCSV = (athletes: Athlete[] | undefined) => {
+  if (!athletes || athletes.length === 0) {
+    return "";
+  }
+
   const csvRows = [];
   const headers = ["Rank", "Full Name", "Finish Time", "Country Name"];
   csvRows.push(headers.join(","));

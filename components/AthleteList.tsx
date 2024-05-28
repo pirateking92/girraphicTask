@@ -1,3 +1,7 @@
+// learnt through nextjs that components are not necessary through it,
+// but that its good practice to use them, especially as projects scale.
+// It can make projects more organised and readable.
+
 import React from "react";
 import { Athlete } from "../types";
 import AthleteRow from "./AthleteRow";
@@ -16,7 +20,7 @@ const AthleteList: React.FC<AthleteListProps> = ({
 }) => {
   return (
     <div>
-      <h2>Athlete Results</h2>
+      <h2 className="text-2xl font-bold mb-4">Athlete Results</h2>
       <table>
         <thead>
           <tr>
@@ -28,12 +32,17 @@ const AthleteList: React.FC<AthleteListProps> = ({
           </tr>
         </thead>
         <tbody>
-          {athletes.map((athlete) => (
-            <AthleteRow key={athlete.rank} athlete={athlete} />
-          ))}
+          {athletes && athletes.length > 0 ? (
+            athletes.map((athlete) => (
+              <AthleteRow key={athlete.rank} athlete={athlete} />
+            ))
+          ) : (
+            <tr>
+              <td colSpan={5}>No athlete data available.</td>
+            </tr>
+          )}
         </tbody>
       </table>
-      <SortOptions sortByRank={sortByRank} sortByBibNumber={sortByBibNumber} />
     </div>
   );
 };

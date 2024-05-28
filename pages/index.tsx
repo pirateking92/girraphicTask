@@ -8,7 +8,10 @@ import SortOptions from "../components/SortOptions";
 import ExportButton from "../components/ExportButton";
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch("http://localhost:/3000/api/athletes");
+  const res = await fetch("http://localhost:3000/api/athletes");
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
+  }
   const athletes: Athlete[] = await res.json();
 
   return {
@@ -34,7 +37,7 @@ const IndexPage = ({ athletes }: { athletes: Athlete[] }) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <AthleteList
         athletes={athletesState}
         sortByRank={sortByRank}

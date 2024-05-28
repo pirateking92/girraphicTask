@@ -12,11 +12,13 @@ export interface Athlete {
 }
 
 export interface RaceResults {
-  raceStatus: string;
-  gender: string;
-  racename: string;
-  tod: string;
-  lastupdated: string;
-  racelength: number;
-  athletes: Athlete[];
+  results: {
+    raceStatus: string;
+    gender: string;
+    racename: string;
+    tod: string;
+    lastupdated: string;
+    racelength: number;
+    athletes: Athlete[];
+  };
 }
