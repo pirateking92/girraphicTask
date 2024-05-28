@@ -7,6 +7,7 @@ import { Athlete } from "../types";
 import AthleteRow from "./AthleteRow";
 import SortOptions from "./SortOptions";
 
+// set the types based on the types.ts in the root folder
 interface AthleteListProps {
   athletes: Athlete[];
   sortByRank: () => void;
@@ -19,19 +20,29 @@ const AthleteList: React.FC<AthleteListProps> = ({
   sortByBibNumber,
 }) => {
   return (
-    <div>
+    <div className="w-full p-6">
       <h2 className="text-2xl font-serif mb-4">Athlete Results</h2>
       <table className="min-w-full divide-y divide-gray-300">
         <thead className="bg-gray-50">
           <tr className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            <th>Rank</th>
-            <th>Bib Number</th>
-            <th>Name</th>
-            <th>Finish Time</th>
-            <th>Country Code</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Rank
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Bib Number
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Name
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Finish Time
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Country Code
+            </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white divide-y divide-gray-200">
           {athletes && athletes.length > 0 ? (
             athletes.map((athlete) => (
               <AthleteRow key={athlete.rank} athlete={athlete} />

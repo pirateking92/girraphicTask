@@ -7,7 +7,7 @@ interface AthleteRowProps {
 
 const AthleteRow: React.FC<AthleteRowProps> = ({ athlete }) => {
   return (
-    <tr className="font-serif">
+    <tr className="font-serif text-center">
       <td>{athlete.rank}</td>
       <td>{athlete.bibnumber}</td>
       <td>{`${athlete.firstname} ${athlete.surname}`}</td>
