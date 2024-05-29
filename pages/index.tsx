@@ -2,6 +2,7 @@ import { GetServerSideProps } from "next";
 // allows us to fetch data on the server side and pass it as props to the page component
 // JSON data is thus collected on every request, so handles cases when info is changed
 import { Athlete } from "../types";
+import { RaceResults } from "../types";
 import { useState } from "react";
 import AthleteList from "../components/AthleteList";
 import SortOptions from "../components/SortOptions";
@@ -12,14 +13,21 @@ export const getServerSideProps: GetServerSideProps = async () => {
   if (!res.ok) {
     throw new Error(`HTTP error! status: ${res.status}`);
   }
-  const athletes: Athlete[] = await res.json();
+  const { racename, athletes }: { racename: string; athletes: Athlete[] } =
+    await res.json();
 
   return {
-    props: { athletes },
+    props: { racename, athletes },
   };
 };
 
-const IndexPage = ({ athletes }: { athletes: Athlete[] }) => {
+const IndexPage = ({
+  racename,
+  athletes,
+}: {
+  racename: string;
+  athletes: Athlete[];
+}) => {
   const [athletesState, setAthletesState] = useState<Athlete[]>(athletes);
 
   const sortByRank = () => {
@@ -37,12 +45,27 @@ const IndexPage = ({ athletes }: { athletes: Athlete[] }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <AthleteList
-        athletes={athletesState}
-        sortByRank={sortByRank}
-        sortByBibNumber={sortByBibNumber}
-      />
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[url('https://thumbs.dreamstime.com/b/giraffe-isolated-12314083.jpg')]">
+      <nav className="bg-black p-4 fixed top-0 w-full z-50">
+        <ul className="flex justify-between">
+          <li>
+            <a href="#" className="text-white peer-hover:">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <AthleteList athletes={athletesState} racename={racename} />
       <div className="flex space-x-4 mb-4">
         <SortOptions
           sortByRank={sortByRank}

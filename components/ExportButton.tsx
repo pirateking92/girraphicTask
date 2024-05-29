@@ -34,7 +34,7 @@ const ExportButton: React.FC<ExportButtonProps> = ({ athletes }) => {
 
   return (
     <CSVLink
-      className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+      className="bg-gray-300 hover:bg-gray-400 border border-blue-500 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
       data={csvData}
       filename="race_results.csv"
     >
