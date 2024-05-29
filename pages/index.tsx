@@ -9,7 +9,7 @@ import SortOptions from "../components/SortOptions";
 import ExportButton from "../components/ExportButton";
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  // route is the filename
+  // routes are the filenames
   const res = await fetch("http://localhost:3000/api/marathons");
   if (!res.ok) {
     // error checking
@@ -49,7 +49,7 @@ const IndexPage = ({
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[url('https://thumbs.dreamstime.com/b/giraffe-isolated-12314083.jpg')]">
-      <nav className="bg-black p-4 fixed top-0 w-full z-50">
+      <nav className="bg-slate-400 p-4 fixed top-0 w-full z-50">
         <ul className="flex justify-between">
           <li>
             <a href="#" className="text-white peer-hover:">
