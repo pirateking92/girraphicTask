@@ -1,4 +1,5 @@
 import React from "react";
+import { Tooltip } from "flowbite-react";
 
 interface SortOptionsProps {
   sortByRank: () => void;
@@ -10,22 +11,34 @@ const SortOptions: React.FC<SortOptionsProps> = ({
   sortByBibNumber,
 }) => {
   return (
-    <div>
-      <button
-        // "tooltips"
-        title="Click to sort athletes by rank"
-        className="bg-gray-300 hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4"
-        onClick={sortByRank}
+    <div className="flex gap-2">
+      <Tooltip
+        content="Click to sort by rank"
+        style="light"
+        animation="duration-500"
+        placement="bottom"
       >
-        Sort by Rank
-      </button>
-      <button
-        title="Click to sort athletes by bib number"
-        className="bg-gray-300 hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-        onClick={sortByBibNumber}
+        <button
+          // "tooltips"
+          className="bg-gray-300 hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4"
+          onClick={sortByRank}
+        >
+          Sort by Rank
+        </button>
+      </Tooltip>
+      <Tooltip
+        content="Click to sort by bib number"
+        style="light"
+        animation="duration-500"
+        placement="bottom"
       >
-        Sort by Bib Number
-      </button>
+        <button
+          className="bg-gray-300 hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          onClick={sortByBibNumber}
+        >
+          Sort by Bib Number
+        </button>
+      </Tooltip>
     </div>
   );
 };
