@@ -9,10 +9,13 @@ import SortOptions from "../components/SortOptions";
 import ExportButton from "../components/ExportButton";
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch("http://localhost:3000/api/athletes");
+  // route is the filename
+  const res = await fetch("http://localhost:3000/api/marathons");
   if (!res.ok) {
+    // error checking
     throw new Error(`HTTP error! status: ${res.status}`);
   }
+  // currently getting props for the racename and all the athlete info. could change later depending on what info we might need to pull
   const { racename, athletes }: { racename: string; athletes: Athlete[] } =
     await res.json();
 
