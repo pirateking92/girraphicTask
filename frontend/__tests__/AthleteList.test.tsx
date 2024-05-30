@@ -26,6 +26,7 @@ describe("AthleteList", () => {
     const { getByText } = render(
       <AthleteList athletes={athlete} racename={racename} />
     );
+    console.log(<AthleteList athletes={athlete} racename={racename} />);
     expect(getByText("Rank")).toBeInTheDocument();
     expect(getByText("Bib Number")).toBeInTheDocument();
     expect(getByText("Name")).toBeInTheDocument();
