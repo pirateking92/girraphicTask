@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getAthletes } from "../controllers/resultsController";
+import { getResults } from "../controllers/resultsController";
 
 const router = Router();
 
-router.get("/", getAthletes);
+router.get("/", getResults);
 
 export default router;

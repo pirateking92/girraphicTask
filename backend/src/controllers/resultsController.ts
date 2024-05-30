@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { readFileSync } from "fs";
 import { RaceResults } from "../models/types";
 
-export const getAthletes = (_req: Request, res: Response) => {
+export const getResults = (_req: Request, res: Response) => {
   const raceData: RaceResults = JSON.parse(
     readFileSync("data/MarathonResults.json", "utf-8")
   );
