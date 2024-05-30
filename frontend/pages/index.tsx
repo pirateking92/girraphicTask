@@ -2,7 +2,6 @@ import { GetServerSideProps } from "next";
 // allows us to fetch data on the server side and pass it as props to the page component
 // JSON data is thus collected on every request, so handles cases when info is changed
 import { Athlete } from "../types";
-import { RaceResults } from "../types";
 import { useState } from "react";
 import AthleteList from "../components/AthleteList";
 import SortOptions from "../components/SortOptions";
