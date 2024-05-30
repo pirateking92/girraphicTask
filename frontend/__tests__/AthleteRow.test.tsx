@@ -27,36 +27,3 @@ describe("AthleteRow", () => {
     expect(getByText("USA")).toBeInTheDocument();
   });
 });
-
-// describe("ExportButton", () => {
-//   const athletes = [
-//     {
-//       rank: 1,
-//       firstname: "Samuel",
-//       surname: "White",
-//       athleteid: "sw007",
-//       finishtime: "2:10:30",
-//       raceprogress: "completed",
-//       teamname: "Team USA",
-//       bibnumber: "012",
-//       flag: "USA",
-//       countryname: "United States",
-//     },
-//     {
-//       rank: 2,
-//       firstname: "Michael",
-//       surname: "Smith",
-//       athleteid: "ms001",
-//       finishtime: "2:12:45",
-//       raceprogress: "completed",
-//       teamname: "Team Canada",
-//       bibnumber: "014",
-//       flag: "CAN",
-//       countryname: "Canada",
-//     },
-//   ];
-
-//   it("renders without crashing", () => {
-//     render(<ExportButton athletes={athletes} />);
-//   });
-// });

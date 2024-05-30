@@ -6,6 +6,8 @@ import React from "react";
 import { Athlete } from "../types";
 import AthleteRow from "./AthleteRow";
 import {
+  // wanted to add more styling to the table with flowbite, but ran out of time
+  // have left it here for reference
   Table,
   TableBody,
   TableCell,

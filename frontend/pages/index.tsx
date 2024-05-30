@@ -7,6 +7,7 @@ import { useState } from "react";
 import AthleteList from "../components/AthleteList";
 import SortOptions from "../components/SortOptions";
 import ExportButton from "../components/ExportButton";
+import Image from "next/image";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   // routes are the filenames
@@ -52,18 +53,23 @@ const IndexPage = ({
       <nav className="bg-slate-400 p-4 fixed top-0 w-full z-50">
         <ul className="flex justify-between">
           <li>
-            <a href="#" className="text-white peer-hover:">
-              Home
+            <a href="https://girraphic.com/" className="text-white peer-hover:">
+              {/* nextjs wants to use 'Image' here, but research said that unless you're using many images, that its not a problem
+              will be good to look into though */}
+              <img
+                src="https://girraphic.com/wp-content/uploads/2020/02/Girraphic-Logo-2020.png"
+                alt="Girraphic Logo"
+                className="w-48"
+              />
             </a>
           </li>
+          <li></li>
           <li>
-            <a href="#" className="text-white">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white">
-              Contact
+            <a
+              href="https://github.com/pirateking92"
+              className="text-white font-montserrat"
+            >
+              Matt Doyle - GitHub
             </a>
           </li>
         </ul>
