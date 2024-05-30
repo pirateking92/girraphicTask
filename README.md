@@ -8,8 +8,6 @@ The resulting order can then be exported as a CSV file.
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Installation
 
@@ -41,15 +39,20 @@ Make sure that the following are installed for this project:
 ## Usage
 
 With all the above installed, follow these commands in your terminal to run the project:
-**Backend**
+### Backend
+
 from the girraphicTask folder:
+
 `cd backend`
-`npx ts-node-dev src/index.ts`
+
+`npx ts-node src/index.ts`
 
 The backend server should then be running on 'port 4000'
 
-**Frontend**
+### Frontend
+
 `cd frontend`
+
 `npm run build && start`
 
 Navigate to 'localhost:3000' in your preferred browser and you will be able to interact with the program :)
