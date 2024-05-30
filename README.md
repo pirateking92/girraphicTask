@@ -5,7 +5,6 @@ The resulting order can then be exported as a CSV file.
 
 ## Table of Contents
 
-- [Girraphic Marathon Parser](#girraphic-marathon-parser)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
