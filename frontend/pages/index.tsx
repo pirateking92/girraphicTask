@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   // routes are the filenames
-  const res = await fetch("http://localhost:4000/api/marathons");
+  const res = await fetch("http://localhost:3000/api/marathons");
   if (!res.ok) {
     // error checking
     throw new Error(`HTTP error! status: ${res.status}`);
@@ -63,12 +63,10 @@ const IndexPage = ({
               />
             </a>
           </li>
-          <li></li>
           <li>
-            <a
-              href="https://github.com/pirateking92"
-              className="text-white font-montserrat"
-            >
+          </li>
+          <li>
+            <a href="https://github.com/pirateking92" className="text-white font-montserrat">
               Matt Doyle - GitHub
             </a>
           </li>
