@@ -1,6 +1,6 @@
 # Girraphic Marathon Parser
 
-A simple webapp that parses JSON data into an easily read format that can be sorted by athlete rank, and athlete bib number.
+A simple webapp written with Typescript and Nextjs, that parses JSON data into an easily readable format that can be sorted by athlete rank, and athlete bib number.
 The resulting order can then be exported as a CSV file.
 
 ## Table of Contents
@@ -8,6 +8,7 @@ The resulting order can then be exported as a CSV file.
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Tests](#tests)
 
 ## Installation
 
@@ -56,3 +57,17 @@ The backend server should then be running on 'port 4000'
 `npm run build && start`
 
 Navigate to 'localhost:3000' in your preferred browser and you will be able to interact with the program :)
+
+## Tests
+
+If you would like to run the tests, navigate to either the backend or the frontend with 
+
+`cd backend`
+
+`cd frontend`
+
+from the main *girraphicTask* folder, and then run 
+
+`npm test`
+
+to run jest and the tests
