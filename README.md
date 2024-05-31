@@ -3,6 +3,8 @@
 A simple webapp written with Typescript and Nextjs, that parses JSON data into an easily readable format that can be sorted by athlete rank, and athlete bib number.
 The resulting order can then be exported as a CSV file.
 
+![Screenshot](/frontend/assets/Screenshot%202024-05-31%20at%2009.01.54.png)
+
 ## Table of Contents
 
 - [Girraphic Marathon Parser](#girraphic-marathon-parser)
