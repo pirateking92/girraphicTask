@@ -5,10 +5,14 @@ The resulting order can then be exported as a CSV file.
 
 ## Table of Contents
 
+- [Girraphic Marathon Parser](#girraphic-marathon-parser)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
   - [Tests](#tests)
+  - [Design Choices](#design-choices)
 
 ## Installation
 
@@ -40,6 +44,7 @@ Make sure that the following are installed for this project:
 ## Usage
 
 With all the above installed, follow these commands in your terminal to run the project:
+
 ### Backend
 
 from the girraphicTask folder:
@@ -60,14 +65,26 @@ Navigate to 'localhost:3000' in your preferred browser and you will be able to i
 
 ## Tests
 
-If you would like to run the tests, navigate to either the backend or the frontend with 
+If you would like to run the tests, navigate to either the backend or the frontend with
 
 `cd backend`
 
 `cd frontend`
 
-from the main *girraphicTask* folder, and then run 
+from the main _girraphicTask_ folder, and then run
 
 `npm test`
 
 to run jest and the tests
+
+## Design Choices
+
+I decided to use Typescript because I had been learning it for the past few weeks and wanted to further develop my knowledge, as well as showcase what I had already learned. I chose Nextjs as this is what mentors and some other software devs had suggested to me when I told them that I was designing my own portfolio website.
+
+My previous experience has been with Go and Python and I felt that this task would have worked better with Typescript and a React framework, so decided not to use either.
+
+I split the project into a backend and frontend mostly due to thoughts of a future scalability, where users could be involved and so data and secrets would need to be hidden away, and also for some possible database storage. This was a stretch goal, and I feel that I could have spent more time on the styling, particularly the Flowbite components, but overall I'm satisfied with having made the split of the front and backend.
+
+If I had more time, I would have liked to improve the styling by making the table have changes in shading when hovered over, and to change the buttons to icons with tooltips rather than with words and tooltips.
+
+I also would have added more tests for failing scenarios, adding in mock instances and results, so as to have more robust testing. This would have perhaps been more meaningful for devs that would look at the code in the future, which also raises that I would change the error messages to be more meaningful to the user.
