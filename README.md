@@ -54,7 +54,7 @@ The backend server should then be running on 'port 4000'
 
 `cd frontend`
 
-`npm run build && start`
+`npm run build && npm run start`
 
 Navigate to 'localhost:3000' in your preferred browser and you will be able to interact with the program :)
 
